@@ -1,0 +1,88 @@
+/* Background image */
+body {
+    /* HAPUS background-image atau background: url(...) */
+    background: linear-gradient(135deg, #5f6769, #b8a9b0);
+
+ /* contoh: gradasi biru pastel */
+    font-family: sans-serif;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+
+/* Container utama */
+main {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 100px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #282c35;
+}
+
+/* Heading */
+h1, h2 {
+    text-align: center;
+    color: #282C35;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #282C35;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Button */
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Card pesan */
+.message-card {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 15px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    color: #282C35;
+}
+
+.message-card p {
+    margin: 0;
+}
+.message-card .meta {
+    font-size: 0.8em;
+    color: 282C35;
+    margin-top: 10px;
+}
