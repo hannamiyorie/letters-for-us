@@ -1,0 +1,8 @@
+# File environment (berisi password)
+backend/.env
+
+# Folder virtual environment
+backend/venv/
+
+# Folder cache Python
+__pycache__/
