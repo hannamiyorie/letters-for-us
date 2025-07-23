@@ -19,11 +19,9 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 migrate = Migrate(app, db)
 
-# Gantikan kedua fungsi get_messages dan post_message dengan yang ini
 @app.route('/api/messages', methods=['GET', 'POST'])
 def handle_messages():
     if request.method == 'POST':
-        # Logika untuk MENYIMPAN pesan baru
         data = request.get_json()
         if not data or not data.get('name') or not data.get('content'):
             return jsonify({"error": "Nama dan pesan tidak boleh kosong"}), 400
@@ -36,8 +34,7 @@ def handle_messages():
         db.session.commit()
         return jsonify(new_message.to_dict()), 201
 
-    else: # Ini akan menangani method GET
-        # Logika untuk MENGAMBIL semua pesan
+    else:
         messages = Message.query.order_by(Message.created_at.desc()).all()
         messages_list = [message.to_dict() for message in messages]
         return jsonify(messages_list)
